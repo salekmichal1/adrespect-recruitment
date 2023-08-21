@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  body {
+    @apply font-normal animate-fadeIn delay-75;
+  }
+  /* .nav__item {
+    @apply p-7 cursor-pointer text-center;
+  }
+  .nav__link:link,
+  .nav__link:visited {
+    @apply text-base no-underline text-dark block;
+  } */
+  .btn {
+    @apply hover:bg-tertiary-light px-4 py-2 lg:px-6 lg:py-4 rounded-full border-none text-xs lg:text-base text-center text-secondary bg-tertiary transition-all cursor-pointer;
+  }
+
+  .card {
+    @apply sm:hover:scale-105 sm:transition-all flex flex-col justify-between max-w-xs sm:max-w-sm h-96 bg-white rounded-3xl px-10 py-12;
+  }
+
+  .card__title {
+    @apply font-['Montserrat'] font-medium text-2xl mt-8;
+  }
+
+  .card__description {
+    @apply text-sm mt-3;
+  }
+
+  .card__link {
+    @apply cursor-pointer sm:transition-all sm:hover:bg-tertiary sm:hover:text-white after:content-[''] after:absolute after:inset-0 after:mx-2 after:border-b-[1px] after:border-solid after:border-tertiary text-tertiary bg-opacity-0 border-none rounded-lg px-2 pt-1 pb-1 relative  -translate-x-2;
+  }
+
+  .gallery__item {
+    @apply mx-auto;
+  }
+
+  .gallery__image {
+    @apply cursor-pointer;
+  }
+}
