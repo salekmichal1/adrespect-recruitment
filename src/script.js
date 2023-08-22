@@ -176,7 +176,7 @@ smoothSlide(navigationListMobile);
 ///////////////////////////////////////
 // MOMILE MENU
 
-const toggleDisplay = (trigger, target) => {
+const toggleDisplay = function (trigger, target) {
   if (!target || !trigger) {
     console.warn('element not existing');
     return;
@@ -190,7 +190,7 @@ const toggleDisplay = (trigger, target) => {
   });
 };
 
-const toggleMobileDropdown = (trigger, target) => {
+const toggleMobileDropdown = function (trigger, target) {
   if (!target || !trigger) {
     console.warn('element not existing');
     return;
