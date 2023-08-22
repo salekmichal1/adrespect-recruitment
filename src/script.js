@@ -13,36 +13,35 @@ const navigationListMobile = document.getElementById('navigationListMobile');
 const navigationListDesktop = document.getElementById('navigationListDesktop');
 
 const searchBar = document.querySelector('.search-bar-roll');
-const searchIcon = document.querySelectorAll('.search-icon');
+const searchIcon = document.getElementById('search-icon');
 
-const slider = document.querySelector('.slider');
+const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.slide');
 const silderBtnLeft = document.querySelector('.slider-btn--left');
 const silderBtnRight = document.querySelector('.slider-btn--right');
 
-const galleryBtn = document.querySelector('.btn-gallery');
+const galleryBtn = document.getElementById('btn-gallery');
 const galleryGradient = document.getElementById('gallery__gradinet');
-const galleryBox = document.querySelector('.section__gallery');
+const galleryBox = document.getElementById('section__gallery');
 const galleryOverflow = document.getElementById('gallery-overflow');
 const galleryImiages = document.querySelectorAll('.gallery__image');
 
-const modalOverlay = document.querySelector('.modal__overlay');
-const modalContainer = document.querySelector('.modal__container');
+const modalOverlay = document.getElementById('modal__overlay');
+const modalContainer = document.getElementById('modal__container');
 const modalImage = document.querySelector('.modal__image');
-const modalBtnBefor = document.querySelector('.modal__btn-befor');
-const modalBtnNext = document.querySelector('.modal__btn-next');
+const modalBtnBefor = document.getElementById('modal__btn-befor');
+const modalBtnNext = document.getElementById('modal__btn-next');
 
 const navigation = document.querySelector('nav');
-const mobileMenuSwitch = document.querySelector('.mobile-menu-switch');
+const mobileMenuSwitch = document.getElementById('mobile-menu-switch');
 const mobileMenu = document.querySelector('.mobile-menu');
-const desktopMenu = document.querySelector('.desktop-navigation');
 const dropdownButton = document.getElementById('dropdownButton');
 const dropdownNavbar = document.getElementById('dropdownNavbar');
 const dropdownButtonMobile = document.getElementById('dropdownButtonMobile');
 const dropdownNavbarMobile = document.getElementById('dropdownNavbarMobile');
 
 ///////////////////////////////////////
-//// SCROLING REALIZACJE
+//// SCROLING EVENTS
 
 btnScrollTo.addEventListener('click', function () {
   realizationSec.scrollIntoView({ behavior: 'smooth' });
@@ -69,13 +68,12 @@ const smoothSlide = function (selector) {
 smoothSlide(navigationListDesktop);
 smoothSlide(navigationListMobile);
 
+///////////////////////////////////////
 // MOMILE MENU
 
 const toggleDisplay = (trigger, target) => {
   if (!target || !trigger) {
-    console.warn(
-      'toggleDisplay: Make sure the target and trigger elements exist in the DOM.',
-    );
+    console.warn('element not existing');
     return;
   }
   let defaultDisplay = window
@@ -89,9 +87,7 @@ const toggleDisplay = (trigger, target) => {
 
 const toggleMobileDropdown = (trigger, target) => {
   if (!target || !trigger) {
-    console.warn(
-      'toggleDisplay: Make sure the target and trigger elements exist in the DOM.',
-    );
+    console.warn('element not existing');
     return;
   }
   let defaultDisplay = window
@@ -140,6 +136,7 @@ mobileMenuSwitch.addEventListener('click', function () {
   }
 });
 
+///////////////////////////////////////
 // SLIDER
 
 const calcHeight = function () {
@@ -195,14 +192,14 @@ setTimeout(transitionTimeOut, 100);
 silderBtnRight.addEventListener('click', nextSlide);
 silderBtnLeft.addEventListener('click', previusSlide);
 
+///////////////////////////////////////
 // SEARCH BAR
 
-searchIcon.forEach(icon => {
-  icon.addEventListener('click', function () {
-    searchBar.focus();
-  });
+searchIcon.addEventListener('click', function () {
+  searchBar.focus();
 });
 
+///////////////////////////////////////
 // GALERY
 
 const imagesArray = [
@@ -219,6 +216,8 @@ const imagesArray = [
   './src/img/project-11.jpg',
 ];
 
+///////////////////////////////////////
+// src for dynamic loading in build version
 // const imagesArray = [
 //   './img/project-1.jpg',
 //   './img/project-2.jpg',
@@ -295,7 +294,7 @@ modalBtnNext.addEventListener('click', function () {
 });
 
 const gallery = new Macy({
-  container: '.section__gallery',
+  container: '#section__gallery',
   mobileFirst: true,
   columns: 2,
   breakAt: {

@@ -22,7 +22,8 @@
           <button
             data-collapse-toggle="navbar-search"
             type="button"
-            class="mobile-menu-switch hover:bg-gray-100 focus:ring-gray-200 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm transition-all focus:ring-1 md:hidden">
+            class="hover:bg-gray-100 focus:ring-gray-200 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm transition-all focus:ring-1 md:hidden"
+            id="mobile-menu-switch">
             <svg
               class="h-5 w-5"
               aria-hidden="true"
@@ -40,8 +41,8 @@
         </div>
 
         <div
-          class="desktop-navigation hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
-          id="navbar-search">
+          class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+          id="desktop-navigation">
           <div class="relative mt-3 md:hidden">
             <div
               class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
@@ -127,9 +128,10 @@
                     class="search-bar-roll z-10 ml-7 w-9 cursor-pointer rounded-3xl border-[1px] border-solid border-transparent bg-white py-1 pr-9 outline-none transition-all duration-200 focus:w-36 focus:cursor-text focus:border-[1px] focus:border-solid focus:border-dark focus:pl-4 xl:focus:w-48"
                     placeholder="Search..." />
                   <img
-                    class="search-icon absolute right-3 top-[6px] z-20 my-auto h-5 w-5 cursor-pointer"
+                    class="absolute right-3 top-[6px] z-20 my-auto h-5 w-5 cursor-pointer"
                     src="./src/img/icon-search.svg"
-                    alt="" />
+                    alt=""
+                    id="search-icon" />
                 </form>
               </div>
             </li>
@@ -222,43 +224,29 @@
                 >Kontakt</a
               >
             </li>
-            <li>
-              <div class="nav__search-bar relative hidden text-center md:block">
-                <form class="relative mx-auto w-max">
-                  <input
-                    class="search-bar-roll z-10 ml-7 w-9 cursor-pointer rounded-3xl border-[1px] border-solid border-transparent bg-white py-1 pr-9 outline-none transition-all duration-200 focus:w-36 focus:cursor-text focus:border-[1px] focus:border-solid focus:border-dark focus:pl-4 xl:focus:w-48"
-                    placeholder="Search..." />
-                  <img
-                    class="search-icon absolute right-3 top-[6px] z-20 my-auto h-5 w-5 cursor-pointer"
-                    src="./src/img/icon-search.svg"
-                    alt="" />
-                </form>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <header
-      class="header slider relative w-full overflow-hidden bg-primary text-dark"
-      id="home">
+      class="relative w-full overflow-hidden bg-primary text-dark"
+      id="slider">
       <div
         class="slide slide--1 absolute flex w-full justify-between pt-[66px] transition-none">
-        <div
-          class="header__left-col px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
+        <div class="px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
           <h1
-            class="header__title font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
+            class="font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
             Nowoczesna <br />
             aranżacja <br />
             Twojego ogrodu
           </h1>
-          <p class="header__description my-8 max-w-lg lg:my-12">
+          <p class="my-8 max-w-lg lg:my-12">
             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
             realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
             podejściem do każdego projektu.
           </p>
-          <div class="header__buttons mb-20 xl:mb-0">
+          <div class="mb-20 xl:mb-0">
             <button class="btn mb-4 mr-4 sm:mb-0 min-[1400px]:mr-9">
               Skontaktuj się z nami
             </button>
@@ -269,7 +257,7 @@
             </button>
           </div>
         </div>
-        <div class="header__right-col hidden xl:block">
+        <div class="hidden xl:block">
           <img
             class="h-full object-cover"
             src="./src/img/header-photo.png"
@@ -278,31 +266,31 @@
       </div>
 
       <div
-        class="slide slide--2 absolute flex w-full justify-between pt-[66px] transition-none">
-        <div
-          class="header__left-col px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
+        class="slide slide--1 absolute flex w-full justify-between pt-[66px] transition-none">
+        <div class="px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
           <h1
-            class="header__title font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
+            class="font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
             Nowoczesna <br />
             aranżacja <br />
             Twojego ogrodu
           </h1>
-          <p class="header__description my-8 max-w-lg lg:my-12">
+          <p class="my-8 max-w-lg lg:my-12">
             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
             realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
             podejściem do każdego projektu.
           </p>
-          <div class="header__buttons mb-20 xl:mb-0">
+          <div class="mb-20 xl:mb-0">
             <button class="btn mb-4 mr-4 sm:mb-0 min-[1400px]:mr-9">
               Skontaktuj się z nami
             </button>
             <button
-              class="btn btn--scroll-to border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white">
+              class="btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white"
+              id="btn--scroll-to">
               Zobacz nasze realizacje &#8595;
             </button>
           </div>
         </div>
-        <div class="header__right-col hidden xl:block">
+        <div class="hidden xl:block">
           <img
             class="h-full object-cover"
             src="./src/img/header-photo.png"
@@ -311,31 +299,31 @@
       </div>
 
       <div
-        class="slide slide--3 absolute flex w-full justify-between pt-[66px] transition-none">
-        <div
-          class="header__left-col px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
+        class="slide slide--1 absolute flex w-full justify-between pt-[66px] transition-none">
+        <div class="px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
           <h1
-            class="header__title font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
+            class="font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
             Nowoczesna <br />
             aranżacja <br />
             Twojego ogrodu
           </h1>
-          <p class="header__description my-8 max-w-lg lg:my-12">
+          <p class="my-8 max-w-lg lg:my-12">
             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
             realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
             podejściem do każdego projektu.
           </p>
-          <div class="header__buttons mb-20 xl:mb-0">
+          <div class="mb-20 xl:mb-0">
             <button class="btn mb-4 mr-4 sm:mb-0 min-[1400px]:mr-9">
               Skontaktuj się z nami
             </button>
             <button
-              class="btn btn--scroll-to border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white">
+              class="btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white"
+              id="btn--scroll-to">
               Zobacz nasze realizacje &#8595;
             </button>
           </div>
         </div>
-        <div class="header__right-col hidden xl:block">
+        <div class="hidden xl:block">
           <img
             class="h-full object-cover"
             src="./src/img/header-photo.png"
@@ -343,7 +331,7 @@
         </div>
       </div>
 
-      <div class="header__arrows absolute bottom-0 right-0 bg-white">
+      <div class="absolute bottom-0 right-0 bg-white">
         <img
           class="slider-btn--left inline cursor-pointer p-6 lg:p-8"
           src="./src/img/slider-left-arrow.svg"
@@ -355,17 +343,17 @@
       </div>
     </header>
 
-    <section class="section my-10 xl:mx-24 xl:mb-40 xl:mt-32" id="offer">
-      <div class="section__heading m-5 max-w-5xl md:ml-12 lg:ml-24">
-        <p class="section__name text-xs text-tertiary">Oferta</p>
+    <section class="my-10 xl:mx-24 xl:mb-40 xl:mt-32" id="offer">
+      <div class="m-5 max-w-5xl md:ml-12 lg:ml-24">
+        <p class="text-xs text-tertiary">Oferta</p>
         <h1
-          class="section__title mb-8 mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
+          class="mb-8 mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
           Działmy
           <span class="italic-effect font-['Montserrat'] font-medium italic"
             >Kompleksowo</span
           >
         </h1>
-        <p class="section__description max-w-2xl text-base">
+        <p class="max-w-2xl text-base">
           Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy
           nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla
           Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym
@@ -418,7 +406,7 @@
     </section>
 
     <section
-      class="section bg-tertiary text-white min-[800px]:flex xl:gap-16"
+      class="bg-tertiary text-white min-[800px]:flex xl:gap-16"
       id="about">
       <div class="section__left-col">
         <img
@@ -429,16 +417,16 @@
 
       <div
         class="section__right-col px-6 py-16 min-[800px]:py-8 xl:px-24 xl:pt-24">
-        <div class="section__heading m-auto max-w-lg">
-          <p class="section__name text-xs text-white">O firmie</p>
+        <div class="m-auto max-w-lg">
+          <p class="text-xs text-white">O firmie</p>
           <h1
-            class="section__title mb-6 mt-4 font-['Montserrat'] text-4xl font-medium xl:mb-8 xl:text-5xl">
+            class="mb-6 mt-4 font-['Montserrat'] text-4xl font-medium xl:mb-8 xl:text-5xl">
             Tworzymy <br />
             <span class="italic-effect font-['Montserrat'] font-medium italic"
               >z pasją</span
             >
           </h1>
-          <p class="section__description mb-6 text-sm lg:mb-16">
+          <p class="mb-6 text-sm lg:mb-16">
             Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
             wykwalifikowani projektanci oraz architekci, których zadaniem jest
             rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
@@ -455,12 +443,10 @@
       </div>
     </section>
 
-    <section class="section bg-primary" id="realization">
-      <div
-        class="section__heading py-16 pl-5 md:pl-12 xl:px-28 xl:pb-24 xl:pt-28">
-        <p class="section__name text-xs text-tertiary">Realizacje</p>
-        <h1
-          class="section__title mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
+    <section class="bg-primary" id="realization">
+      <div class="py-16 pl-5 md:pl-12 xl:px-28 xl:pb-24 xl:pt-28">
+        <p class="text-xs text-tertiary">Realizacje</p>
+        <h1 class="mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
           Nasze
 
           <span class="italic-effect font-['Montserrat'] font-medium italic"
@@ -469,21 +455,22 @@
         </h1>
       </div>
       <div class="relative overflow-hidden" id="gallery-overflow">
-        <div class="section__gallery mx-auto"></div>
+        <div class="mx-auto" id="section__gallery"></div>
 
         <div
           class="pointer-events-none absolute bottom-0 left-0 h-full w-full bg-gradient-to-t from-primary to-transparent transition-all duration-500"
           id="gallery__gradinet"></div>
 
         <button
-          class="btn btn-gallery absolute bottom-20 left-1/2 z-10 -translate-x-1/2 border border-solid border-dark bg-transparent text-dark hover:border-white hover:bg-secondary">
+          class="btn absolute bottom-20 left-1/2 z-10 -translate-x-1/2 border border-solid border-dark bg-transparent text-dark hover:border-white hover:bg-secondary"
+          id="btn-gallery">
           Rozwiń &#8595;
         </button>
       </div>
     </section>
 
     <section
-      class="contact bg-secondary px-6 py-10 lg:px-24 lg:py-20 xl:px-32 xl:py-20"
+      class="bg-secondary px-6 py-10 lg:px-24 lg:py-20 xl:px-32 xl:py-20"
       id="contact">
       <div
         class="block justify-center gap-6 bg-tertiary px-6 py-10 min-[500px]:px-12 sm:flex md:items-center md:gap-10 lg:px-16 lg:py-20 xl:gap-20 xl:px-28 xl:py-32 2xl:gap-36">
@@ -549,40 +536,30 @@
       </div>
     </footer>
     <div
-      class="modal__overlay fixed inset-0 z-50 hidden h-full w-full bg-dark bg-opacity-60">
+      class="fixed inset-0 z-50 hidden h-full w-full bg-dark bg-opacity-60"
+      id="modal__overlay">
       <img
         class="absolute right-0 top-0 h-12 w-12 bg-dark bg-opacity-80 p-2 hover:cursor-pointer md:h-16 md:w-16"
         src="./src/img/icon-close.svg"
         alt="close" />
     </div>
-    <!-- <div
-      class="modal__container border-8 border-dark border-solid border-opacity-80 fixed z-30 left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 hidden justify-center">
-      <img
-        class="modal__btn-befor z-20 bg-dark p-1 transition-all hover:bg-opacity-90 hover:cursor-pointer bg-opacity-80"
-        src="./src/img/arrow_back.svg"
-        alt="arrow" />
-      <img
-        class="modal__image z-30"
-        src="./src/img/project-11.jpg"
-        alt="photo" />
-      <img
-        class="modal__btn-next z-20 bg-dark p-1 transition-all hover:bg-opacity-90 hover:cursor-pointer bg-opacity-80"
-        src="./src/img/arrow_forward.svg"
-        alt="arrow" />
-    </div> -->
+
     <div
-      class="modal__container fixed left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 justify-center">
+      class="fixed left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 justify-center"
+      id="modal__container">
       <img
-        class="modal__btn-befor absolute left-0 top-0 h-full w-8 -translate-x-full bg-dark bg-opacity-80 p-1 transition-all hover:cursor-pointer hover:bg-opacity-90 md:w-16"
+        class="absolute left-0 top-0 h-full w-8 -translate-x-full bg-dark bg-opacity-80 p-1 transition-all hover:cursor-pointer hover:bg-opacity-90 md:w-16"
         src="./src/img/arrow_back.svg"
-        alt="arrow" />
+        alt="arrow"
+        id="modal__btn-befor" />
       <img
         class="modal__image border-y-[20px] border-solid border-dark border-opacity-80"
         alt="photo" />
       <img
-        class="modal__btn-next absolute right-0 top-0 h-full w-8 translate-x-full bg-dark bg-opacity-80 p-1 transition-all hover:cursor-pointer hover:bg-opacity-90 md:w-16"
+        class="absolute right-0 top-0 h-full w-8 translate-x-full bg-dark bg-opacity-80 p-1 transition-all hover:cursor-pointer hover:bg-opacity-90 md:w-16"
         src="./src/img/arrow_forward.svg"
-        alt="arrow" />
+        alt="arrow"
+        id="modal__btn-next" />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/macy@2.5.1/dist/macy.min.js"></script>
     <script src="./src/script.js"></script>
