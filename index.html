@@ -1,8 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl-PL">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Przywracamy naturę do Twojego otoczenia! Nasza firma specjalizuje się w profesjonalnych aranżacjach ogrodów, tworząc przestrzenie pełne harmonii i piękna. Zdobądź swój wymarzony ogród dzięki naszym kreatywnym rozwiązaniom i doświadczeniu w projektowaniu krajobrazu." />
+    <meta
+      name="keywords"
+      content="aranżacja ogrodów, projektowanie krajobrazu, ogrodnictwo, przestrzeń zielona, rośliny ozdobne, harmonia ogrodu, działka rekreacyjna, architektura krajobrazu" />
     <title>Recruitment</title>
     <link rel="icon" type="image/png" href="./src/img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,39 +21,30 @@
   <body class="w-full bg-secondary">
     <nav class="fixed z-40 w-full bg-white px-10 xl:px-20">
       <div class="mx-auto flex flex-wrap items-center justify-between p-4">
-        <button id="logo-button">
+        <a class="cursor-pointer" id="logo-button">
           <img src="./src/img/logo-black.svg" alt="logo" />
-        </button>
+        </a>
         <div class="flex md:order-2 md:hidden">
           <button
             data-collapse-toggle="navbar-search"
             type="button"
             class="hover:bg-gray-100 focus:ring-gray-200 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm transition-all focus:ring-1 md:hidden"
             id="mobile-menu-switch">
-            <svg
-              class="h-5 w-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14">
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
+            <img
+              src="./src/img/icon-hamburger.svg"
+              alt="menu-btn"
+              class="h-5 w-5" />
           </button>
         </div>
 
         <div
           class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
           id="desktop-navigation">
-          <div class="relative mt-3 md:hidden">
+          <!-- <div class="relative mt-3 md:hidden">
             <div
               class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
               <svg
-                class="text-gray-500 dark:text-gray-400 h-4 w-4"
+                class="text-gray-500 h-4 w-4"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -59,12 +56,13 @@
                   stroke-width="2"
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
               </svg>
+              <img src="./src/img/icon-search.svg" alt="icon" class="h-4 w-4" />
             </div>
             <input
               id="search-navbar"
               class="text-black border-gray-300 block w-full rounded-full border bg-transparent p-2 pl-10 text-sm outline-none"
               placeholder="Search..." />
-          </div>
+          </div> -->
           <ul
             class="border-black mt-4 flex flex-col items-center rounded-3xl border bg-transparent p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0"
             id="navigationListDesktop">
@@ -144,22 +142,12 @@
           <div class="relative mt-3 md:hidden">
             <div
               class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-              <svg
-                class="text-gray-500 dark:text-gray-400 h-4 w-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20">
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-              </svg>
+              <img
+                src="./src/img/icon-magnifier.svg"
+                alt="magnifier"
+                class="h-4 w-4" />
             </div>
             <input
-              id="search-navbar"
               class="text-black border-gray-300 block w-full rounded-full border bg-transparent p-2 pl-10 text-sm outline-none"
               placeholder="Search..." />
           </div>
@@ -253,8 +241,7 @@
               Skontaktuj się z nami
             </button>
             <button
-              class="btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white"
-              id="btn--scroll-to">
+              class="btn--scroll-to btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white">
               Zobacz nasze realizacje &#8595;
             </button>
           </div>
@@ -270,12 +257,12 @@
       <div
         class="slide slide--1 absolute flex w-full justify-between pt-[66px] transition-none">
         <div class="px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
-          <h1
+          <h2
             class="font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
             Nowoczesna <br />
             aranżacja <br />
             Twojego ogrodu
-          </h1>
+          </h2>
           <p class="my-8 max-w-lg lg:my-12">
             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
             realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
@@ -286,8 +273,7 @@
               Skontaktuj się z nami
             </button>
             <button
-              class="btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white"
-              id="btn--scroll-to">
+              class="btn--scroll-to btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white">
               Zobacz nasze realizacje &#8595;
             </button>
           </div>
@@ -303,12 +289,12 @@
       <div
         class="slide slide--1 absolute flex w-full justify-between pt-[66px] transition-none">
         <div class="px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
-          <h1
+          <h2
             class="font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
             Nowoczesna <br />
             aranżacja <br />
             Twojego ogrodu
-          </h1>
+          </h2>
           <p class="my-8 max-w-lg lg:my-12">
             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
             realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
@@ -319,8 +305,7 @@
               Skontaktuj się z nami
             </button>
             <button
-              class="btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white"
-              id="btn--scroll-to">
+              class="btn--scroll-to btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white">
               Zobacz nasze realizacje &#8595;
             </button>
           </div>
@@ -350,13 +335,13 @@
     <section class="my-10 xl:mx-24 xl:mb-40 xl:mt-32" id="offer">
       <div class="m-5 max-w-5xl md:ml-12 lg:ml-24">
         <p class="text-xs text-tertiary">Oferta</p>
-        <h1
+        <h2
           class="mb-8 mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
           Działmy
           <span class="italic-effect font-['Montserrat'] font-medium italic"
             >Kompleksowo</span
           >
-        </h1>
+        </h2>
         <p class="max-w-2xl text-base">
           Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy
           nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla
@@ -370,7 +355,7 @@
         <div class="card relative overflow-hidden" id="card--1">
           <div class="card__center--top">
             <img class="card__icon" src="./src/img/icon-pen.svg" alt="pen" />
-            <h1 class="card__title">Projekty</h1>
+            <h2 class="card__title">Projekty</h2>
             <p class="card__description">
               Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
               wykorzystaniem istniejącej przestrzeni.
@@ -402,7 +387,7 @@
         <div class="card relative overflow-hidden" id="card--2">
           <div class="card__center--top">
             <img class="card__icon" src="./src/img/icon-eye.svg" alt="pen" />
-            <h1 class="card__title">Wizualizacje</h1>
+            <h2 class="card__title">Wizualizacje</h2>
             <p class="card__description">
               Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
               animowanego w technologii 3D.
@@ -434,7 +419,7 @@
         <div class="card relative overflow-hidden" id="card--3">
           <div class="card--top">
             <img class="card__icon" src="./src/img/icon-spark.svg" alt="pen" />
-            <h1 class="card__title">Realizacje</h1>
+            <h2 class="card__title">Realizacje</h2>
             <p class="card__description">
               Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
               zaawansowanych technologii.
@@ -478,13 +463,13 @@
         class="section__right-col px-6 py-16 min-[800px]:py-8 xl:px-24 xl:pt-24">
         <div class="m-auto max-w-lg">
           <p class="text-xs text-white">O firmie</p>
-          <h1
+          <h2
             class="mb-6 mt-4 font-['Montserrat'] text-4xl font-medium xl:mb-8 xl:text-5xl">
             Tworzymy <br />
             <span class="italic-effect font-['Montserrat'] font-medium italic"
               >z pasją</span
             >
-          </h1>
+          </h2>
           <p class="mb-6 text-sm lg:mb-16">
             Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
             wykwalifikowani projektanci oraz architekci, których zadaniem jest
@@ -505,13 +490,13 @@
     <section class="bg-primary" id="realization">
       <div class="py-16 pl-5 md:pl-12 xl:px-28 xl:pb-24 xl:pt-28">
         <p class="text-xs text-tertiary">Realizacje</p>
-        <h1 class="mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
+        <h2 class="mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
           Nasze
 
           <span class="italic-effect font-['Montserrat'] font-medium italic"
             >projekty</span
           >
-        </h1>
+        </h2>
       </div>
       <div class="relative overflow-hidden" id="gallery-overflow">
         <div class="mx-auto" id="section__gallery"></div>
@@ -533,11 +518,11 @@
       id="contact">
       <div
         class="block justify-center gap-6 bg-tertiary px-6 py-10 min-[500px]:px-12 sm:flex md:items-center md:gap-10 lg:px-16 lg:py-20 xl:gap-20 xl:px-28 xl:py-32 2xl:gap-36">
-        <h1
+        <h2
           class="mb-4 font-['Montserrat'] text-lg font-normal text-secondary sm:mb-0 md:text-2xl lg:mt-3 lg:text-[40px] lg:leading-10 lg:max-2xl:w-min lg:max-2xl:grow">
           Zostańmy w kontakcie!<br />
           Znajdziesz nas na <span class="font-medium italic">Instagramie.</span>
-        </h1>
+        </h2>
         <div class="">
           <p class="text-secondary">
             Śledź nasze <br />
@@ -608,15 +593,16 @@
       id="modal__container">
       <img
         class="absolute left-0 top-0 h-full w-8 -translate-x-full bg-dark bg-opacity-80 p-1 transition-all hover:cursor-pointer hover:bg-opacity-90 md:w-16"
-        src="./src/img/arrow_back.svg"
+        src="./src/img/arrow-back.svg"
         alt="arrow"
         id="modal__btn-befor" />
       <img
+        src="./src/img/project-1.jpg"
         class="modal__image border-y-[20px] border-solid border-dark border-opacity-80"
         alt="photo" />
       <img
         class="absolute right-0 top-0 h-full w-8 translate-x-full bg-dark bg-opacity-80 p-1 transition-all hover:cursor-pointer hover:bg-opacity-90 md:w-16"
-        src="./src/img/arrow_forward.svg"
+        src="./src/img/arrow-forward.svg"
         alt="arrow"
         id="modal__btn-next" />
     </div>

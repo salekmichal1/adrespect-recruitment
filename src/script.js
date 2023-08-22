@@ -3,7 +3,7 @@
 const body = document.querySelector('body');
 
 // BUTTONS
-const btnScrollTo = document.getElementById('btn--scroll-to');
+const btnScrollTo = document.querySelectorAll('.btn--scroll-to');
 const logoButton = document.getElementById('logo-button');
 
 // SCROLLING
@@ -147,9 +147,11 @@ logoButton.addEventListener('click', function () {
   slider.scrollIntoView({ behavior: 'smooth' });
 });
 
-btnScrollTo.addEventListener('click', function () {
-  const yPosition = realizationSec.offsetTop;
-  window.scrollTo({ top: yPosition - navHeight, behavior: 'smooth' });
+btnScrollTo.forEach(btn => {
+  btn.addEventListener('click', function () {
+    const yPosition = realizationSec.offsetTop;
+    window.scrollTo({ top: yPosition - navHeight, behavior: 'smooth' });
+  });
 });
 
 const smoothSlide = function (selector) {
