@@ -209,35 +209,35 @@ mobileMenuSwitch.addEventListener('click', function () {
 ///////////////////////////////////////
 // GALERY
 
-// const imagesArray = [
-//   './src/img/project-1.jpg',
-//   './src/img/project-2.jpg',
-//   './src/img/project-3.jpg',
-//   './src/img/project-4.jpg',
-//   './src/img/project-5.jpg',
-//   './src/img/project-6.jpg',
-//   './src/img/project-7.jpg',
-//   './src/img/project-8.jpg',
-//   './src/img/project-9.jpg',
-//   './src/img/project-10.jpg',
-//   './src/img/project-11.jpg',
-// ];
+const imagesArray = [
+  './src/img/project-1.jpg',
+  './src/img/project-2.jpg',
+  './src/img/project-3.jpg',
+  './src/img/project-4.jpg',
+  './src/img/project-5.jpg',
+  './src/img/project-6.jpg',
+  './src/img/project-7.jpg',
+  './src/img/project-8.jpg',
+  './src/img/project-9.jpg',
+  './src/img/project-10.jpg',
+  './src/img/project-11.jpg',
+];
 
 ///////////////////////////////////////
 // src for dynamic loading in build version
-const imagesArray = [
-  './img/project-1.jpg',
-  './img/project-2.jpg',
-  './img/project-3.jpg',
-  './img/project-4.jpg',
-  './img/project-5.jpg',
-  './img/project-6.jpg',
-  './img/project-7.jpg',
-  './img/project-8.jpg',
-  './img/project-9.jpg',
-  './img/project-10.jpg',
-  './img/project-11.jpg',
-];
+// const imagesArray = [
+//   './img/project-1.jpg',
+//   './img/project-2.jpg',
+//   './img/project-3.jpg',
+//   './img/project-4.jpg',
+//   './img/project-5.jpg',
+//   './img/project-6.jpg',
+//   './img/project-7.jpg',
+//   './img/project-8.jpg',
+//   './img/project-9.jpg',
+//   './img/project-10.jpg',
+//   './img/project-11.jpg',
+// ];
 
 let targetImgSource = '';
 
