@@ -131,7 +131,6 @@ searchIcon.addEventListener('click', function () {
 const cardsAnimation = function (trigger, target) {
   trigger.addEventListener('click', function () {
     target.focus();
-    console.log(cardInfoProject);
   });
 };
 
