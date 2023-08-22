@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors');
+
 module.exports = {
+  plugins: ['prettier-plugin-tailwindcss'],
   content: ['./src/**/*.{css,js}', './*.html'],
   theme: {
     colors: {
@@ -10,6 +14,8 @@ module.exports = {
       dark: '#111',
       white: '#fff',
       transparent: 'transparent',
+      gray: colors.gray,
+      slate: colors.slate,
     },
     extend: {
       keyframes: {

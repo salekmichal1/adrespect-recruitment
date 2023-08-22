@@ -3,6 +3,8 @@
 const body = document.querySelector('body');
 
 const btnScrollTo = document.getElementById('btn--scroll-to');
+const logoButton = document.getElementById('logo-button');
+
 const offerSec = document.getElementById('offer');
 const aboutSec = document.getElementById('about');
 const realizationSec = document.getElementById('realization');
@@ -46,6 +48,10 @@ btnScrollTo.addEventListener('click', function () {
   realizationSec.scrollIntoView({ behavior: 'smooth' });
 });
 
+logoButton.addEventListener('click', function () {
+  slider.scrollIntoView({ behavior: 'smooth' });
+});
+
 const smoothSlide = function (selector) {
   selector.addEventListener('click', function (event) {
     event.preventDefault();
@@ -65,24 +71,10 @@ smoothSlide(navigationListMobile);
 
 // MOMILE MENU
 
-// mobileMenuSwitch.addEventListener('click', function () {
-//   if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-//     mobileMenu.style.display = 'block';
-//     navigation.classList.add('rounded-b-3xl');
-//   } else {
-//     mobileMenu.style.display = 'none';
-//     navigation.classList.remove('rounded-b-3xl');
-//   }
-// });
-
-// dropdownButton.addEventListener('click', function () {
-//   dropdownNavbar.style.display = 'flex';
-// });
-
 const toggleDisplay = (trigger, target) => {
   if (!target || !trigger) {
     console.warn(
-      'toggleDisplay: Make sure the target and trigger elements exist in the DOM.'
+      'toggleDisplay: Make sure the target and trigger elements exist in the DOM.',
     );
     return;
   }
@@ -98,7 +90,7 @@ const toggleDisplay = (trigger, target) => {
 const toggleMobileDropdown = (trigger, target) => {
   if (!target || !trigger) {
     console.warn(
-      'toggleDisplay: Make sure the target and trigger elements exist in the DOM.'
+      'toggleDisplay: Make sure the target and trigger elements exist in the DOM.',
     );
     return;
   }
@@ -117,18 +109,6 @@ window.addEventListener('resize', function () {
   navigation.style.borderBottomLeftRadius = '0px';
 });
 
-// const openDropdownMenu = function (dropDown) {
-//   dropDown.style.display = 'block';
-//   console.log(dropDown);
-// };
-
-// dropdownButton.addEventListener('click', function () {
-//   openDropdownMenu(dropdownNavbar);
-// });
-// dropdownButtonMobile.addEventListener('click', function () {
-//   openDropdownMenu(dropdownNavbarMobile);
-// });
-
 const closeDrodownMenu = function (menuButton, dropDownMenu, event) {
   const outTargetDropdown = !dropDownMenu.contains(event.target);
   const outTargetDropdownButton = !menuButton.contains(event.target);
@@ -136,7 +116,6 @@ const closeDrodownMenu = function (menuButton, dropDownMenu, event) {
   if (outTargetDropdown === true && outTargetDropdownButton === true) {
     dropDownMenu.style.display = 'none';
   }
-  console.log(outTargetDropdown, outTargetDropdownButton);
 };
 
 window.addEventListener('click', function (event) {
@@ -211,7 +190,7 @@ const previusSlide = function () {
 
 calcHeight();
 setTimeout(slideFunc(0));
-setTimeout(transitionTimeOut);
+setTimeout(transitionTimeOut, 100);
 
 silderBtnRight.addEventListener('click', nextSlide);
 silderBtnLeft.addEventListener('click', previusSlide);
@@ -240,6 +219,20 @@ const imagesArray = [
   './src/img/project-11.jpg',
 ];
 
+// const imagesArray = [
+//   './img/project-1.jpg',
+//   './img/project-2.jpg',
+//   './img/project-3.jpg',
+//   './img/project-4.jpg',
+//   './img/project-5.jpg',
+//   './img/project-6.jpg',
+//   './img/project-7.jpg',
+//   './img/project-8.jpg',
+//   './img/project-9.jpg',
+//   './img/project-10.jpg',
+//   './img/project-11.jpg',
+// ];
+
 let targetImgSource = '';
 
 imagesArray.forEach((el, index) => {
@@ -263,7 +256,7 @@ imagesArray.forEach((el, index) => {
       'hidden',
       'opacity-0',
       'transition-all',
-      'duration-300'
+      'duration-300',
     );
   }
   galleryBox.appendChild(img);
@@ -273,7 +266,7 @@ const findImageIndex = () =>
   imagesArray
     .map(
       currentValue =>
-        currentValue.split('/')[currentValue.split('/').length - 1]
+        currentValue.split('/')[currentValue.split('/').length - 1],
     )
     .indexOf(targetImgSource.split('/')[targetImgSource.split('/').length - 1]);
 
@@ -353,6 +346,5 @@ window.addEventListener('resize', function () {
   let galleryDinamicSize = galleryBox.offsetHeight;
   galleryOverflow.style.height = `${galleryDinamicSize / 1.5}px`;
   galleryGradient.style.height = '100%';
-  console.log(galleryOverflow.style.height);
   galleryBtn.style.display = 'block';
 });

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zadanie</title>
-    <!-- <link rel="stylesheet" href="./src/style.css" /> -->
+    <title>Recruitment</title>
+    <link rel="icon" type="image/png" href="./src/img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,20 +12,19 @@
       rel="stylesheet" />
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-secondary w-full">
-    <nav class="bg-white fixed z-40 w-full px-10 xl:px-20">
-      <div class="flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#home"> <img src="./src/img/logo-black.svg" alt="logo" /> </a>
-        <div class="flex md:hidden md:order-2">
+  <body class="w-full bg-secondary">
+    <nav class="fixed z-40 w-full bg-white px-10 xl:px-20">
+      <div class="mx-auto flex flex-wrap items-center justify-between p-4">
+        <button id="logo-button">
+          <img src="./src/img/logo-black.svg" alt="logo" />
+        </button>
+        <div class="flex md:order-2 md:hidden">
           <button
             data-collapse-toggle="navbar-search"
             type="button"
-            class="mobile-menu-switch inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-search"
-            aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
+            class="mobile-menu-switch hover:bg-gray-100 focus:ring-gray-200 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm transition-all focus:ring-1 md:hidden">
             <svg
-              class="w-5 h-5"
+              class="h-5 w-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -41,13 +40,13 @@
         </div>
 
         <div
-          class="desktop-navigation items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          class="desktop-navigation hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
           id="navbar-search">
           <div class="relative mt-3 md:hidden">
             <div
-              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
               <svg
-                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                class="text-gray-500 dark:text-gray-400 h-4 w-4"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -62,15 +61,15 @@
             </div>
             <input
               id="search-navbar"
-              class="block w-full p-2 pl-10 text-sm text-black border border-gray-300 rounded-full bg-transparent outline-none"
+              class="text-black border-gray-300 block w-full rounded-full border bg-transparent p-2 pl-10 text-sm outline-none"
               placeholder="Search..." />
           </div>
           <ul
-            class="flex flex-col items-center p-4 md:p-0 mt-4 font-medium border border-black rounded-3xl bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white"
+            class="border-black mt-4 flex flex-col items-center rounded-3xl border bg-transparent p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0"
             id="navigationListDesktop">
             <li>
               <button
-                class="block py-2 pl-3 pr-4 text-dark rounded-3xl hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0"
+                class="block rounded-3xl py-2 pl-3 pr-4 text-dark hover:bg-secondary md:p-0 md:hover:bg-transparent md:hover:text-tertiary"
                 id="dropdownButton">
                 Oferta
                 <img
@@ -80,7 +79,7 @@
               </button>
               <div
                 id="dropdownNavbar"
-                class="z-50 hidden fixed mt-3 font-normal bg-white divide-y rounded-lg shadow">
+                class="fixed z-50 mt-3 hidden divide-y rounded-lg bg-white font-normal shadow">
                 <ul class="py-2 text-sm" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a href="#" class="block px-4 py-2 hover:bg-secondary"
@@ -103,32 +102,32 @@
             <li>
               <a
                 href="#about"
-                class="nav__link block py-2 pl-3 pr-4 text-dark rounded-3xl hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0"
+                class="nav__link block rounded-3xl py-2 pl-3 pr-4 text-dark hover:bg-secondary md:p-0 md:hover:bg-transparent md:hover:text-tertiary"
                 >O firmie</a
               >
             </li>
             <li>
               <a
                 href="#realization"
-                class="nav__link block py-2 pl-3 pr-4 text-dark rounded-3xl hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0"
+                class="nav__link block rounded-3xl py-2 pl-3 pr-4 text-dark hover:bg-secondary md:p-0 md:hover:bg-transparent md:hover:text-tertiary"
                 >Ralizacje</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="nav__link block py-2 pl-3 pr-4 text-dark rounded-3xl hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0"
+                class="nav__link block rounded-3xl py-2 pl-3 pr-4 text-dark hover:bg-secondary md:p-0 md:hover:bg-transparent md:hover:text-tertiary"
                 >Kontakt</a
               >
             </li>
             <li>
-              <div class="nav__search-bar relative hidden md:block text-center">
+              <div class="nav__search-bar relative hidden text-center md:block">
                 <form class="relative mx-auto w-max">
                   <input
-                    class="search-bar-roll bg-white z-10 ml-7 pr-9 py-1 w-9 rounded-3xl cursor-pointer outline-none border-solid border-[1px] border-transparent focus:border-dark focus:border-solid focus:border-[1px] focus:w-36 xl:focus:w-48 focus:cursor-text focus:pl-4 transition-all duration-200"
+                    class="search-bar-roll z-10 ml-7 w-9 cursor-pointer rounded-3xl border-[1px] border-solid border-transparent bg-white py-1 pr-9 outline-none transition-all duration-200 focus:w-36 focus:cursor-text focus:border-[1px] focus:border-solid focus:border-dark focus:pl-4 xl:focus:w-48"
                     placeholder="Search..." />
                   <img
-                    class="search-icon absolute top-[6px] right-3 my-auto w-5 h-5 z-20 cursor-pointer"
+                    class="search-icon absolute right-3 top-[6px] z-20 my-auto h-5 w-5 cursor-pointer"
                     src="./src/img/icon-search.svg"
                     alt="" />
                 </form>
@@ -137,13 +136,13 @@
           </ul>
         </div>
         <div
-          class="mobile-menu items-center justify-between hidden md:hidden w-full"
+          class="mobile-menu hidden w-full items-center justify-between md:hidden"
           id="navbar-search">
           <div class="relative mt-3 md:hidden">
             <div
-              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
               <svg
-                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                class="text-gray-500 dark:text-gray-400 h-4 w-4"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -158,15 +157,15 @@
             </div>
             <input
               id="search-navbar"
-              class="block w-full p-2 pl-10 text-sm text-black border border-gray-300 rounded-full bg-transparent outline-none"
+              class="text-black border-gray-300 block w-full rounded-full border bg-transparent p-2 pl-10 text-sm outline-none"
               placeholder="Search..." />
           </div>
           <ul
-            class="flex flex-col items-center p-4 md:p-0 mt-4 font-medium border border-black rounded-3xl bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white"
+            class="border-black mt-4 flex flex-col items-center rounded-3xl border bg-transparent p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0"
             id="navigationListMobile">
             <li>
               <button
-                class="block py-2 pl-3 pr-4 text-dark rounded-3xl hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0"
+                class="block rounded-3xl py-2 pl-3 pr-4 text-dark hover:bg-secondary md:p-0 md:hover:bg-transparent md:hover:text-tertiary"
                 id="dropdownButtonMobile">
                 Oferta
                 <img
@@ -176,26 +175,26 @@
               </button>
               <div
                 id="dropdownNavbarMobile"
-                class="z-50 hidden fixed mt-3 font-normal bg-white divide-y rounded-lg shadow">
+                class="fixed z-50 mt-3 hidden divide-y rounded-lg bg-white font-normal shadow">
                 <ul class="py-2 text-sm" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a
                       href="#projects"
-                      class="block px-4 py-2 hover:bg-secondary rounded-3xl"
+                      class="block rounded-3xl px-4 py-2 hover:bg-secondary"
                       >Projekty</a
                     >
                   </li>
                   <li>
                     <a
                       href="#projects"
-                      class="block px-4 py-2 hover:bg-secondary rounded-3xl"
+                      class="block rounded-3xl px-4 py-2 hover:bg-secondary"
                       >Wizualizacje</a
                     >
                   </li>
                   <li>
                     <a
                       href="#projects"
-                      class="block px-4 py-2 hover:bg-secondary rounded-3xl"
+                      class="block rounded-3xl px-4 py-2 hover:bg-secondary"
                       >Realizacje</a
                     >
                   </li>
@@ -205,32 +204,32 @@
             <li>
               <a
                 href="#about"
-                class="nav-mobile__link block py-2 pl-3 pr-4 text-dark rounded-3xl hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0"
+                class="nav-mobile__link block rounded-3xl py-2 pl-3 pr-4 text-dark hover:bg-secondary md:p-0 md:hover:bg-transparent md:hover:text-tertiary"
                 >O firmie</a
               >
             </li>
             <li>
               <a
                 href="#realization"
-                class="nav-mobile__link block py-2 pl-3 pr-4 text-dark rounded-3xl hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0"
+                class="nav-mobile__link block rounded-3xl py-2 pl-3 pr-4 text-dark hover:bg-secondary md:p-0 md:hover:bg-transparent md:hover:text-tertiary"
                 >Ralizacje</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="nav-mobile__link block py-2 pl-3 pr-4 text-dark rounded-3xl hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0"
+                class="nav-mobile__link block rounded-3xl py-2 pl-3 pr-4 text-dark hover:bg-secondary md:p-0 md:hover:bg-transparent md:hover:text-tertiary"
                 >Kontakt</a
               >
             </li>
             <li>
-              <div class="nav__search-bar relative hidden md:block text-center">
+              <div class="nav__search-bar relative hidden text-center md:block">
                 <form class="relative mx-auto w-max">
                   <input
-                    class="search-bar-roll bg-white z-10 ml-7 pr-9 py-1 w-9 rounded-3xl cursor-pointer outline-none border-solid border-[1px] border-transparent focus:border-dark focus:border-solid focus:border-[1px] focus:w-36 xl:focus:w-48 focus:cursor-text focus:pl-4 transition-all duration-200"
+                    class="search-bar-roll z-10 ml-7 w-9 cursor-pointer rounded-3xl border-[1px] border-solid border-transparent bg-white py-1 pr-9 outline-none transition-all duration-200 focus:w-36 focus:cursor-text focus:border-[1px] focus:border-solid focus:border-dark focus:pl-4 xl:focus:w-48"
                     placeholder="Search..." />
                   <img
-                    class="search-icon absolute top-[6px] right-3 my-auto w-5 h-5 z-20 cursor-pointer"
+                    class="search-icon absolute right-3 top-[6px] z-20 my-auto h-5 w-5 cursor-pointer"
                     src="./src/img/icon-search.svg"
                     alt="" />
                 </form>
@@ -245,26 +244,26 @@
       class="header slider relative w-full overflow-hidden bg-primary text-dark"
       id="home">
       <div
-        class="slide slide--1 absolute w-full pt-[66px] flex justify-between transition-none">
+        class="slide slide--1 absolute flex w-full justify-between pt-[66px] transition-none">
         <div
-          class="header__left-col max-xl:mx-auto px-16 py-10 lg:py-20 min-[1400px]:px-24">
+          class="header__left-col px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
           <h1
-            class="header__title text-4xl lg:text-5xl xl:text-6xl font-['Montserrat'] font-medium">
+            class="header__title font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
             Nowoczesna <br />
             aranżacja <br />
             Twojego ogrodu
           </h1>
-          <p class="header__description max-w-lg my-8 lg:my-12">
+          <p class="header__description my-8 max-w-lg lg:my-12">
             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
             realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
             podejściem do każdego projektu.
           </p>
           <div class="header__buttons mb-20 xl:mb-0">
-            <button class="btn mb-4 sm:mb-0 mr-4 min-[1400px]:mr-9">
+            <button class="btn mb-4 mr-4 sm:mb-0 min-[1400px]:mr-9">
               Skontaktuj się z nami
             </button>
             <button
-              class="btn bg-opacity-0 text-tertiary hover:text-white border-tertiary border-solid border-[1px]"
+              class="btn border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white"
               id="btn--scroll-to">
               Zobacz nasze realizacje &#8595;
             </button>
@@ -279,26 +278,26 @@
       </div>
 
       <div
-        class="slide slide--2 absolute w-full pt-[66px] flex justify-between transition-none">
+        class="slide slide--2 absolute flex w-full justify-between pt-[66px] transition-none">
         <div
-          class="header__left-col max-xl:mx-auto px-16 py-10 lg:py-20 min-[1400px]:px-24">
+          class="header__left-col px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
           <h1
-            class="header__title text-4xl lg:text-5xl xl:text-6xl font-['Montserrat'] font-medium">
+            class="header__title font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
             Nowoczesna <br />
             aranżacja <br />
             Twojego ogrodu
           </h1>
-          <p class="header__description max-w-lg my-8 lg:my-12">
+          <p class="header__description my-8 max-w-lg lg:my-12">
             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
             realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
             podejściem do każdego projektu.
           </p>
           <div class="header__buttons mb-20 xl:mb-0">
-            <button class="btn mb-4 sm:mb-0 mr-4 min-[1400px]:mr-9">
+            <button class="btn mb-4 mr-4 sm:mb-0 min-[1400px]:mr-9">
               Skontaktuj się z nami
             </button>
             <button
-              class="btn btn--scroll-to bg-opacity-0 text-tertiary hover:text-white border-tertiary border-solid border-[1px]">
+              class="btn btn--scroll-to border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white">
               Zobacz nasze realizacje &#8595;
             </button>
           </div>
@@ -312,26 +311,26 @@
       </div>
 
       <div
-        class="slide slide--3 absolute w-full pt-[66px] flex justify-between transition-none">
+        class="slide slide--3 absolute flex w-full justify-between pt-[66px] transition-none">
         <div
-          class="header__left-col max-xl:mx-auto px-16 py-10 lg:py-20 min-[1400px]:px-24">
+          class="header__left-col px-10 py-10 max-xl:mx-auto lg:py-20 min-[1400px]:px-24">
           <h1
-            class="header__title text-4xl lg:text-5xl xl:text-6xl font-['Montserrat'] font-medium">
+            class="header__title font-['Montserrat'] text-4xl font-medium lg:text-5xl xl:text-6xl">
             Nowoczesna <br />
             aranżacja <br />
             Twojego ogrodu
           </h1>
-          <p class="header__description max-w-lg my-8 lg:my-12">
+          <p class="header__description my-8 max-w-lg lg:my-12">
             Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
             realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
             podejściem do każdego projektu.
           </p>
           <div class="header__buttons mb-20 xl:mb-0">
-            <button class="btn mb-4 sm:mb-0 mr-4 min-[1400px]:mr-9">
+            <button class="btn mb-4 mr-4 sm:mb-0 min-[1400px]:mr-9">
               Skontaktuj się z nami
             </button>
             <button
-              class="btn btn--scroll-to bg-opacity-0 text-tertiary hover:text-white border-tertiary border-solid border-[1px]">
+              class="btn btn--scroll-to border-[1px] border-solid border-tertiary bg-opacity-0 text-tertiary hover:text-white">
               Zobacz nasze realizacje &#8595;
             </button>
           </div>
@@ -346,23 +345,21 @@
 
       <div class="header__arrows absolute bottom-0 right-0 bg-white">
         <img
-          class="slider-btn--left inline p-6 lg:p-8 cursor-pointer"
+          class="slider-btn--left inline cursor-pointer p-6 lg:p-8"
           src="./src/img/slider-left-arrow.svg"
           alt="left-arrow" />
         <img
-          class="slider-btn--right inline p-6 cursor-pointer"
+          class="slider-btn--right inline cursor-pointer p-6"
           src="./src/img/slider-right-arrow.svg"
           alt="right-arrow" />
       </div>
     </header>
 
-    <section
-      class="section ml-5 my-10 md:ml-12 xl:mt-32 xl:mx-24 xl:mb-40"
-      id="offer">
-      <div class="section__heading max-w-5xl m-auto">
+    <section class="section my-10 xl:mx-24 xl:mb-40 xl:mt-32" id="offer">
+      <div class="section__heading m-5 max-w-5xl md:ml-12 lg:ml-24">
         <p class="section__name text-xs text-tertiary">Oferta</p>
         <h1
-          class="section__title font-['Montserrat'] font-medium text-4xl xl:text-5xl mt-4 mb-8">
+          class="section__title mb-8 mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
           Działmy
           <span class="italic-effect font-['Montserrat'] font-medium italic"
             >Kompleksowo</span
@@ -377,7 +374,7 @@
       </div>
 
       <div
-        class="cards flex flex-col items-center mx-auto flex-wrap md:justify-center md:flex-row mt-16 xl:mt-32 xl:flex-nowrap xl:gap-16 gap-8">
+        class="cards mx-auto mt-16 flex flex-col flex-wrap items-center gap-8 md:flex-row md:justify-center xl:mt-32 xl:flex-nowrap xl:gap-16">
         <div class="card" id="card--1">
           <div class="card__center--top">
             <img class="card__icon" src="./src/img/icon-pen.svg" alt="pen" />
@@ -421,7 +418,7 @@
     </section>
 
     <section
-      class="section min-[800px]:flex bg-tertiary text-white xl:gap-16"
+      class="section bg-tertiary text-white min-[800px]:flex xl:gap-16"
       id="about">
       <div class="section__left-col">
         <img
@@ -432,16 +429,16 @@
 
       <div
         class="section__right-col px-6 py-16 min-[800px]:py-8 xl:px-24 xl:pt-24">
-        <div class="section__heading max-w-lg m-auto">
-          <p class="section__name text-white text-xs">O firmie</p>
+        <div class="section__heading m-auto max-w-lg">
+          <p class="section__name text-xs text-white">O firmie</p>
           <h1
-            class="section__title font-['Montserrat'] font-medium text-4xl xl:text-5xl mt-4 mb-6 xl:mb-8">
+            class="section__title mb-6 mt-4 font-['Montserrat'] text-4xl font-medium xl:mb-8 xl:text-5xl">
             Tworzymy <br />
             <span class="italic-effect font-['Montserrat'] font-medium italic"
               >z pasją</span
             >
           </h1>
-          <p class="section__description text-sm mb-6 lg:mb-16">
+          <p class="section__description mb-6 text-sm lg:mb-16">
             Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
             wykwalifikowani projektanci oraz architekci, których zadaniem jest
             rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
@@ -451,7 +448,7 @@
           </p>
 
           <button
-            class="btn btn--about border-solid border-secondary border-[1px] hover:bg-secondary hover:text-tertiary ml-0">
+            class="btn btn--about ml-0 border-[1px] border-solid border-secondary hover:bg-secondary hover:text-tertiary">
             Poznaj nas bliżej &#8594;
           </button>
         </div>
@@ -460,10 +457,10 @@
 
     <section class="section bg-primary" id="realization">
       <div
-        class="section__heading pl-5 py-16 md:pl-12 xl:px-28 xl:pt-28 xl:pb-24">
+        class="section__heading py-16 pl-5 md:pl-12 xl:px-28 xl:pb-24 xl:pt-28">
         <p class="section__name text-xs text-tertiary">Realizacje</p>
         <h1
-          class="section__title font-['Montserrat'] font-medium text-4xl xl:text-5xl mt-4">
+          class="section__title mt-4 font-['Montserrat'] text-4xl font-medium xl:text-5xl">
           Nasze
 
           <span class="italic-effect font-['Montserrat'] font-medium italic"
@@ -475,25 +472,25 @@
         <div class="section__gallery mx-auto"></div>
 
         <div
-          class="absolute left-0 bottom-0 w-full h-full bg-gradient-to-t from-primary to-transparent pointer-events-none transition-all duration-500"
+          class="pointer-events-none absolute bottom-0 left-0 h-full w-full bg-gradient-to-t from-primary to-transparent transition-all duration-500"
           id="gallery__gradinet"></div>
 
         <button
-          class="btn btn-gallery absolute z-10 bottom-20 left-1/2 -translate-x-1/2 bg-transparent border-dark border-solid border text-dark hover:bg-secondary hover:border-white">
+          class="btn btn-gallery absolute bottom-20 left-1/2 z-10 -translate-x-1/2 border border-solid border-dark bg-transparent text-dark hover:border-white hover:bg-secondary">
           Rozwiń &#8595;
         </button>
       </div>
     </section>
 
     <section
-      class="contact bg-secondary px-6 py-10 lg:py-20 lg:px-24 xl:px-32 xl:py-20"
+      class="contact bg-secondary px-6 py-10 lg:px-24 lg:py-20 xl:px-32 xl:py-20"
       id="contact">
       <div
-        class="justify-center bg-tertiary px-6 py-10 min-[500px]:px-12 block sm:flex md:items-center gap-6 md:gap-10 lg:py-20 lg:px-16 xl:px-28 xl:py-32 xl:gap-20 2xl:gap-36">
+        class="block justify-center gap-6 bg-tertiary px-6 py-10 min-[500px]:px-12 sm:flex md:items-center md:gap-10 lg:px-16 lg:py-20 xl:gap-20 xl:px-28 xl:py-32 2xl:gap-36">
         <h1
-          class="font-['Montserrat'] font-normal text-secondary text-lg mb-4 sm:mb-0 md:text-2xl lg:text-[40px] lg:leading-10 lg:mt-3 lg:max-2xl:w-min lg:max-2xl:grow">
+          class="mb-4 font-['Montserrat'] text-lg font-normal text-secondary sm:mb-0 md:text-2xl lg:mt-3 lg:text-[40px] lg:leading-10 lg:max-2xl:w-min lg:max-2xl:grow">
           Zostańmy w kontakcie!<br />
-          Znajdziesz nas na <span class="italic font-medium">Instagramie.</span>
+          Znajdziesz nas na <span class="font-medium italic">Instagramie.</span>
         </h1>
         <div class="">
           <p class="text-secondary">
@@ -501,25 +498,28 @@
             najnowsze realizacje!
           </p>
           <button
-            class="btn mt-4 lg:mt-6 border border-solid border-secondary bg-secondary text-tertiary hover:bg-transparent hover:text-secondary">
+            class="btn mt-4 border border-solid border-secondary bg-secondary text-tertiary hover:bg-transparent hover:text-secondary lg:mt-6">
             Instagram
           </button>
         </div>
       </div>
     </section>
     <footer
-      class="px-6 py-10 md:px-10 xl:px-32 xl:py-20 bg-dark text-white"
+      class="bg-dark px-6 py-10 text-white md:px-10 xl:px-32 xl:py-20"
       id="footer">
       <div
-        class="flex flex-col flex-wrap md:flex-row md:justify-between gap-10 pb-12 border-b border-secondary">
-        <img src="./src/img/logo-white.svg" class="" alt="logo" />
-        <div class="flex flex-col flex-wrap md:flex-row gap-10 items-center">
+        class="flex flex-col flex-wrap gap-10 border-b border-secondary pb-12 md:flex-row md:justify-between">
+        <img
+          src="./src/img/logo-white.png"
+          class="object-scale-down"
+          alt="logo" />
+        <div class="flex flex-col flex-wrap items-center gap-10 md:flex-row">
           <p class="">Daj znać, co możemy dla Ciebie zrobić!</p>
           <button class="btn">Skontaktuj się z nami</button>
         </div>
       </div>
       <div
-        class="py-12 flex flex-col flex-wrap items-center text-center justify-between gap-10 md:flex-row">
+        class="flex flex-col flex-wrap items-center justify-between gap-10 py-12 text-center md:flex-row">
         <ul class="flex flex-col gap-10 md:flex-row">
           <li>
             <a href="#">Kontakt</a>
@@ -540,7 +540,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col items-center flex-wrap gap-10 justify-between mt-12 md:flex-row">
+        class="mt-12 flex flex-col flex-wrap items-center justify-between gap-10 md:flex-row">
         <p>Prawa zastrzeżone © 2022</p>
         <div class="flex">
           <p class="mr-4">made by</p>
@@ -549,9 +549,9 @@
       </div>
     </footer>
     <div
-      class="modal__overlay z-50 fixed inset-0 w-full h-full bg-dark bg-opacity-60 hidden">
+      class="modal__overlay fixed inset-0 z-50 hidden h-full w-full bg-dark bg-opacity-60">
       <img
-        class="absolute w-12 h-12 md:w-16 md:h-16 top-0 right-0 bg-dark bg-opacity-80 p-2 hover:cursor-pointer"
+        class="absolute right-0 top-0 h-12 w-12 bg-dark bg-opacity-80 p-2 hover:cursor-pointer md:h-16 md:w-16"
         src="./src/img/icon-close.svg"
         alt="close" />
     </div>
@@ -571,17 +571,16 @@
         alt="arrow" />
     </div> -->
     <div
-      class="modal__container fixed z-50 left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 hidden justify-center">
+      class="modal__container fixed left-1/2 top-1/2 z-50 hidden -translate-x-1/2 -translate-y-1/2 justify-center">
       <img
-        class="modal__btn-befor absolute left-0 top-0 h-full w-8 md:w-16 -translate-x-full bg-dark p-1 transition-all hover:bg-opacity-90 hover:cursor-pointer bg-opacity-80"
+        class="modal__btn-befor absolute left-0 top-0 h-full w-8 -translate-x-full bg-dark bg-opacity-80 p-1 transition-all hover:cursor-pointer hover:bg-opacity-90 md:w-16"
         src="./src/img/arrow_back.svg"
         alt="arrow" />
       <img
-        class="modal__image border-y-[20px] border-dark border-solid border-opacity-80"
-        src="./src/img/project-11.jpg"
+        class="modal__image border-y-[20px] border-solid border-dark border-opacity-80"
         alt="photo" />
       <img
-        class="modal__btn-next absolute right-0 top-0 h-full w-8 md:w-16 translate-x-full bg-dark p-1 transition-all hover:bg-opacity-90 hover:cursor-pointer bg-opacity-80"
+        class="modal__btn-next absolute right-0 top-0 h-full w-8 translate-x-full bg-dark bg-opacity-80 p-1 transition-all hover:cursor-pointer hover:bg-opacity-90 md:w-16"
         src="./src/img/arrow_forward.svg"
         alt="arrow" />
     </div>

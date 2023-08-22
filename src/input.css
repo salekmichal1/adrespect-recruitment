@@ -9,8 +9,12 @@
 }
 
 @layer components {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
-    @apply font-normal animate-fadeIn delay-75;
+    @apply animate-fadeIn font-normal delay-75;
   }
   /* .nav__item {
     @apply p-7 cursor-pointer text-center;
@@ -20,23 +24,23 @@
     @apply text-base no-underline text-dark block;
   } */
   .btn {
-    @apply hover:bg-tertiary-light px-4 py-2 lg:px-6 lg:py-4 rounded-full border-none text-xs lg:text-base text-center text-secondary bg-tertiary transition-all cursor-pointer;
+    @apply cursor-pointer rounded-full border-none bg-tertiary px-4 py-2 text-center text-xs text-secondary transition-all hover:bg-tertiary-light lg:px-6 lg:py-4 lg:text-base;
   }
 
   .card {
-    @apply sm:hover:scale-105 sm:transition-all flex flex-col justify-between max-w-xs sm:max-w-sm h-96 bg-white rounded-3xl px-10 py-12;
+    @apply flex h-96 max-w-xs flex-col justify-between rounded-3xl bg-white px-10 py-12 sm:max-w-sm sm:transition-all sm:hover:scale-105;
   }
 
   .card__title {
-    @apply font-['Montserrat'] font-medium text-2xl mt-8;
+    @apply mt-8 font-['Montserrat'] text-2xl font-medium;
   }
 
   .card__description {
-    @apply text-sm mt-3;
+    @apply mt-3 text-sm;
   }
 
   .card__link {
-    @apply cursor-pointer sm:transition-all sm:hover:bg-tertiary sm:hover:text-white after:content-[''] after:absolute after:inset-0 after:mx-2 after:border-b-[1px] after:border-solid after:border-tertiary text-tertiary bg-opacity-0 border-none rounded-lg px-2 pt-1 pb-1 relative  -translate-x-2;
+    @apply relative -translate-x-2 cursor-pointer rounded-lg border-none bg-opacity-0 px-2 pb-1 pt-1 text-tertiary after:absolute after:inset-0 after:mx-2 after:border-b-[1px] after:border-solid after:border-tertiary after:content-[''] sm:transition-all sm:hover:bg-tertiary  sm:hover:text-white;
   }
 
   .gallery__item {
