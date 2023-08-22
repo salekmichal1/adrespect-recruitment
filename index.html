@@ -367,7 +367,7 @@
 
       <div
         class="cards mx-auto mt-16 flex flex-col flex-wrap items-center gap-8 md:flex-row md:justify-center xl:mt-32 xl:flex-nowrap xl:gap-16">
-        <div class="card" id="card--1">
+        <div class="card relative overflow-hidden" id="card--1">
           <div class="card__center--top">
             <img class="card__icon" src="./src/img/icon-pen.svg" alt="pen" />
             <h1 class="card__title">Projekty</h1>
@@ -377,10 +377,29 @@
             </p>
           </div>
           <div class="card__center--bottom">
-            <button class="card__link">Dowiedz się więcej &#8594;</button>
+            <button class="card__link" id="card__button--project">
+              Dowiedz się więcej &#8594;
+            </button>
+          </div>
+
+          <div
+            class="absolute inset-0 w-full -translate-x-[101%] rounded-3xl bg-tertiary p-10 transition-all duration-200 focus:translate-x-0"
+            id="card__info--project"
+            tabindex="0">
+            <p class="text-secondary">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
+              voluptatum? Molestiae facilis adipisci recusandae rerum ex iure
+              autem hic sed aspernatur deserunt velit eaque animi ducimus,
+              similique cupiditate reiciendis maiores!
+            </p>
+            <button
+              class="btn btn--about mt-10 border-[1px] border-solid border-secondary hover:bg-secondary hover:text-tertiary">
+              Zamów już teraz &#8594;
+            </button>
           </div>
         </div>
-        <div class="card" id="card--2">
+
+        <div class="card relative overflow-hidden" id="card--2">
           <div class="card__center--top">
             <img class="card__icon" src="./src/img/icon-eye.svg" alt="pen" />
             <h1 class="card__title">Wizualizacje</h1>
@@ -390,10 +409,29 @@
             </p>
           </div>
           <div class="card__center--bottom">
-            <button class="card__link">Dowiedz się więcej &#8594;</button>
+            <button class="card__link" id="card__button--visualization">
+              Dowiedz się więcej &#8594;
+            </button>
+          </div>
+
+          <div
+            class="absolute inset-0 w-full -translate-x-[101%] rounded-3xl bg-tertiary p-10 transition-all duration-200 focus:translate-x-0"
+            id="card__info--visualization"
+            tabindex="0">
+            <p class="text-secondary">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
+              voluptatum? Molestiae facilis adipisci recusandae rerum ex iure
+              autem hic sed aspernatur deserunt velit eaque animi ducimus,
+              similique cupiditate reiciendis maiores!
+            </p>
+            <button
+              class="btn btn--about mt-10 border-[1px] border-solid border-secondary hover:bg-secondary hover:text-tertiary">
+              Zamów już teraz &#8594;
+            </button>
           </div>
         </div>
-        <div class="card" id="card--3">
+
+        <div class="card relative overflow-hidden" id="card--3">
           <div class="card--top">
             <img class="card__icon" src="./src/img/icon-spark.svg" alt="pen" />
             <h1 class="card__title">Realizacje</h1>
@@ -402,8 +440,25 @@
               zaawansowanych technologii.
             </p>
           </div>
-          <div class="card--bottom">
-            <button class="card__link">Dowiedz się więcej &#8594;</button>
+          <div class="card__center--bottom">
+            <button class="card__link" id="card__button--realisation">
+              Dowiedz się więcej &#8594;
+            </button>
+          </div>
+          <div
+            class="absolute inset-0 w-full -translate-x-[101%] rounded-3xl bg-tertiary p-10 transition-all duration-200 focus:translate-x-0"
+            id="card__info--realisation"
+            tabindex="0">
+            <p class="text-secondary">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
+              voluptatum? Molestiae facilis adipisci recusandae rerum ex iure
+              autem hic sed aspernatur deserunt velit eaque animi ducimus,
+              similique cupiditate reiciendis maiores!
+            </p>
+            <button
+              class="btn btn--about mt-10 border-[1px] border-solid border-secondary hover:bg-secondary hover:text-tertiary">
+              Zamów już teraz &#8594;
+            </button>
           </div>
         </div>
       </div>

@@ -47,6 +47,20 @@ const dropdownButtonMobile = document.getElementById('dropdownButtonMobile');
 const dropdownNavbarMobile = document.getElementById('dropdownNavbarMobile');
 const navigation = document.querySelector('nav');
 
+// CARDS
+const cardButtonProject = document.getElementById('card__button--project');
+const cardInfoProject = document.getElementById('card__info--project');
+const cardButtonVisualization = document.getElementById(
+  'card__button--visualization',
+);
+const cardInfoVisualization = document.getElementById(
+  'card__info--visualization',
+);
+const cardButtonRealisation = document.getElementById(
+  'card__button--realisation',
+);
+const cardInfoRealisation = document.getElementById('card__info--realisation');
+
 ///////////////////////////////////////
 // SLIDER
 
@@ -110,6 +124,20 @@ silderBtnLeft.addEventListener('click', previusSlide);
 searchIcon.addEventListener('click', function () {
   searchBar.focus();
 });
+
+///////////////////////////////////////
+//// CARDS
+
+const cardsAnimation = function (trigger, target) {
+  trigger.addEventListener('click', function () {
+    target.focus();
+    console.log(cardInfoProject);
+  });
+};
+
+cardsAnimation(cardButtonProject, cardInfoProject);
+cardsAnimation(cardButtonRealisation, cardInfoRealisation);
+cardsAnimation(cardButtonVisualization, cardInfoVisualization);
 
 ///////////////////////////////////////
 //// SCROLLING EVENTS
