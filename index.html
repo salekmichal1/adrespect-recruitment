@@ -125,8 +125,9 @@
               <div class="nav__search-bar relative hidden text-center md:block">
                 <form class="relative mx-auto w-max">
                   <input
-                    class="search-bar-roll z-10 ml-7 w-9 cursor-pointer rounded-3xl border-[1px] border-solid border-transparent bg-white py-1 pr-9 outline-none transition-all duration-200 focus:w-36 focus:cursor-text focus:border-[1px] focus:border-solid focus:border-dark focus:pl-4 xl:focus:w-48"
-                    placeholder="Search..." />
+                    class="z-10 ml-7 w-9 cursor-pointer rounded-3xl border-[1px] border-solid border-transparent bg-white py-1 pr-9 outline-none transition-all duration-200 focus:w-36 focus:cursor-text focus:border-[1px] focus:border-solid focus:border-dark focus:pl-4 xl:focus:w-48"
+                    placeholder="Search..."
+                    id="search-bar-roll" />
                   <img
                     class="absolute right-3 top-[6px] z-20 my-auto h-5 w-5 cursor-pointer"
                     src="./src/img/icon-search.svg"
@@ -138,8 +139,8 @@
           </ul>
         </div>
         <div
-          class="mobile-menu hidden w-full items-center justify-between md:hidden"
-          id="navbar-search">
+          class="hidden w-full items-center justify-between md:hidden"
+          id="mobile-menu">
           <div class="relative mt-3 md:hidden">
             <div
               class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
@@ -333,13 +334,15 @@
 
       <div class="absolute bottom-0 right-0 bg-white">
         <img
-          class="slider-btn--left inline cursor-pointer p-6 lg:p-8"
+          class="inline cursor-pointer p-6 lg:p-8"
           src="./src/img/slider-left-arrow.svg"
-          alt="left-arrow" />
+          alt="left-arrow"
+          id="slider-btn--left" />
         <img
           class="slider-btn--right inline cursor-pointer p-6"
           src="./src/img/slider-right-arrow.svg"
-          alt="right-arrow" />
+          alt="right-arrow"
+          id="slider-btn--right" />
       </div>
     </header>
 

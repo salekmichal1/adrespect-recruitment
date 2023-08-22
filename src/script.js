@@ -2,9 +2,11 @@
 
 const body = document.querySelector('body');
 
+// BUTTONS
 const btnScrollTo = document.getElementById('btn--scroll-to');
 const logoButton = document.getElementById('logo-button');
 
+// SCROLLING
 const offerSec = document.getElementById('offer');
 const aboutSec = document.getElementById('about');
 const realizationSec = document.getElementById('realization');
@@ -12,36 +14,41 @@ const contactSec = document.getElementById('contact');
 const navigationListMobile = document.getElementById('navigationListMobile');
 const navigationListDesktop = document.getElementById('navigationListDesktop');
 
-const searchBar = document.querySelector('.search-bar-roll');
+// SEARCH BAR
+const searchBar = document.getElementById('search-bar-roll');
 const searchIcon = document.getElementById('search-icon');
 
+// SLIDER
 const slider = document.getElementById('slider');
+const silderBtnLeft = document.getElementById('slider-btn--left');
+const silderBtnRight = document.getElementById('slider-btn--right');
 const slides = document.querySelectorAll('.slide');
-const silderBtnLeft = document.querySelector('.slider-btn--left');
-const silderBtnRight = document.querySelector('.slider-btn--right');
 
+// GALLERY
 const galleryBtn = document.getElementById('btn-gallery');
 const galleryGradient = document.getElementById('gallery__gradinet');
 const galleryBox = document.getElementById('section__gallery');
 const galleryOverflow = document.getElementById('gallery-overflow');
 const galleryImiages = document.querySelectorAll('.gallery__image');
 
+// MODAL
 const modalOverlay = document.getElementById('modal__overlay');
 const modalContainer = document.getElementById('modal__container');
-const modalImage = document.querySelector('.modal__image');
 const modalBtnBefor = document.getElementById('modal__btn-befor');
 const modalBtnNext = document.getElementById('modal__btn-next');
+const modalImage = document.querySelector('.modal__image');
 
-const navigation = document.querySelector('nav');
+// NAVIGATION
 const mobileMenuSwitch = document.getElementById('mobile-menu-switch');
-const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenu = document.getElementById('mobile-menu');
 const dropdownButton = document.getElementById('dropdownButton');
 const dropdownNavbar = document.getElementById('dropdownNavbar');
 const dropdownButtonMobile = document.getElementById('dropdownButtonMobile');
 const dropdownNavbarMobile = document.getElementById('dropdownNavbarMobile');
+const navigation = document.querySelector('nav');
 
 ///////////////////////////////////////
-//// SCROLING EVENTS
+//// SCROLLING EVENTS
 
 btnScrollTo.addEventListener('click', function () {
   realizationSec.scrollIntoView({ behavior: 'smooth' });
